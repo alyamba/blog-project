@@ -4,14 +4,16 @@ import { NavBar } from "./components/NavBar";
 
 
 const App = () => {
-  const onPress = () => {
-    console.log("hello world");
-  };
+  // const onPress = () => {
+  //   console.log("hello world");
+  // };
   return (
     <div>
       <NavBar/>
-      <h1>Hello</h1>
-      <Button label={"Hello"} onPress={onPress} type="primary" />
+      <div className="Workspace">
+        <div className="account__div"></div>
+        <div className="notes__div"></div>
+      </div>
     </div>
   );
 };
