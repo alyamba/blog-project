@@ -1,7 +1,6 @@
 import "./App.css";
 import { Button } from "./components";
-import { NavBar } from "./components/NavBar";
-
+import { UserPhoto, NavBar, UserBlock } from "./components";
 
 const App = () => {
   // const onPress = () => {
@@ -9,9 +8,9 @@ const App = () => {
   // };
   return (
     <div>
-      <NavBar/>
-      <div className="Workspace">
-        <div className="account__div"></div>
+      <NavBar />
+      <div className="workspace">
+        <UserBlock/>
         <div className="notes__div"></div>
       </div>
     </div>

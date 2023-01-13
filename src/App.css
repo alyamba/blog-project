@@ -75,3 +75,44 @@ button {
 .primary:active {
   background: #c76df3;
 }
+
+.account__div {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 8px;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.1);
+}
+
+.user-photo__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgb(165, 165, 165);
+}
+
+.account__div {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-info__div {
+  padding-left: 10px;
+}
+
+.user-location__div,
+.user-birthday__div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  padding: 4px;
+}
+
+.label{
+  font-size: 24px;
+}
