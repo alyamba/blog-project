@@ -1,3 +1,3 @@
 export const Input = () => {
-  return <input></input>;
+  return <textarea placeholder="New post"></textarea>;
 };
