@@ -203,11 +203,26 @@ textarea {
 }
 
 .post__div{
-  margin: 4px 6em;
+  margin: 20px 6em;
   border-radius: 8px;
   background: #f9f9f9;
   border: 1px solid rgb(199, 199, 199);
   border-radius: 8px;
   box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.1);
   padding: 1.5em;
+}
+
+.footer__div{
+  background-color: #c76df3;
+  padding: 20px 6em;
+}
+
+.social-networks__div{
+  text-align: end;
+}
+
+.small{
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
 }

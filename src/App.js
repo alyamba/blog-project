@@ -1,6 +1,5 @@
 import "./App.css";
-import { Button, InputBlock, PostBlock } from "./components";
-import { UserPhoto, NavBar, UserBlock } from "./components";
+import { Button, InputBlock, PostBlock, UserPhoto, NavBar, UserBlock, Footer } from "./components";
 
 const App = () => {
   // const onPress = () => {
@@ -16,6 +15,10 @@ const App = () => {
         </div>
       </div>
       <PostBlock />
+      <PostBlock />
+      <PostBlock />
+      <PostBlock />
+      <Footer/>
     </div>
   );
 };

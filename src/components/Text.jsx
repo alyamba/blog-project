@@ -7,6 +7,6 @@ export const Text = ({text, onClick, type, size, additionalClasses = ''}) => {
 }
 
 
-// type: paragraph | label | link | logo | title | post
+// type: paragraph | label | link | logo | title | post | small
 // size: 18px | 12px 
 // activity: active | hover | click | default
