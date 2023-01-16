@@ -7,9 +7,11 @@ export const PostBlock = () => {
   return (
     <div className="post__div">
       <div className="post-block-user-info__div">
-        <UserPhoto />
-        <Text type="label" text="Logunova Alina" />
-        <Text type="paragraph" text="16.01.2023, 13:50" />
+        <UserPhoto size="small" />
+        <div className="user-info__div">
+          <Text type="label" text="Logunova Alina" />
+          <Text type="paragraph" text="16.01.2023, 13:50" />
+        </div>
       </div>
       <Text type="post" text={textMessage} />
     </div>

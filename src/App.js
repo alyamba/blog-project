@@ -1,10 +1,15 @@
 import "./App.css";
 import { Button, InputBlock, PostBlock, UserPhoto, NavBar, UserBlock, Footer } from "./components";
+import moment from "moment";
+
+const data = [{
+  text: "Hello! I'm Alina and I'm a beginner developer. I study at BSUIR and learn English. I like to spend my free time with my cat ^_^",
+  author: "Logunova Alina",
+  datetime: 1673896847965,
+}]
 
 const App = () => {
-  // const onPress = () => {
-  //   console.log("hello world");
-  // };
+  // console.log(moment(data[0].datetime).format('LLL'))
   return (
     <div>
       <NavBar />
@@ -14,8 +19,6 @@ const App = () => {
           <InputBlock />
         </div>
       </div>
-      <PostBlock />
-      <PostBlock />
       <PostBlock />
       <PostBlock />
       <Footer/>

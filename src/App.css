@@ -34,6 +34,8 @@ ul {
 
 li {
   list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
@@ -198,14 +200,12 @@ textarea {
 .post-block-user-info__div{
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  /* background: #f4e6fb; */
 }
 
 .post__div{
   margin: 20px 6em;
   border-radius: 8px;
-  background: #f9f9f9;
+  background: #f2f2f2;
   border: 1px solid rgb(199, 199, 199);
   border-radius: 8px;
   box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.1);
@@ -213,8 +213,8 @@ textarea {
 }
 
 .footer__div{
-  background-color: #c76df3;
-  padding: 20px 6em;
+  background-color: #956df3;
+  padding: 12px 6em;
 }
 
 .social-networks__div{
@@ -225,4 +225,19 @@ textarea {
   color: #fff;
   font-weight: 700;
   text-align: center;
+}
+
+.small-photo{
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.paragraph{
+  font-size: 12px;
+}
+
+.post{
+  font-size: 20px;
+  padding-top: 10px;
 }

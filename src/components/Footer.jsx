@@ -6,10 +6,10 @@ export const Footer = () => {
   return (
     <div className="footer__div">
       <div className="social-networks__div">
-        <a href="https://github.com/alyamba">
+        <a href="https://github.com/alyamba" target="_blank" rel="noreferrer">
           <img src={gitURL} alt="icon" className="icon"/>
         </a>
-        <a href="https://www.linkedin.com/in/alyamba/">
+        <a href="https://www.linkedin.com/in/alyamba/" target="_blank" rel="noreferrer">
           <img src={linkedinURL} alt="icon" className="icon"/>
         </a>
       </div>
