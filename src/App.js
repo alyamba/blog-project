@@ -1,5 +1,5 @@
 import "./App.css";
-import { Button, InputBlock } from "./components";
+import { Button, InputBlock, PostBlock } from "./components";
 import { UserPhoto, NavBar, UserBlock } from "./components";
 
 const App = () => {
@@ -10,11 +10,12 @@ const App = () => {
     <div>
       <NavBar />
       <div className="workspace">
-        <UserBlock/>
+        <UserBlock />
         <div className="notes__div">
-          <InputBlock/>
+          <InputBlock />
         </div>
       </div>
+      <PostBlock />
     </div>
   );
 };

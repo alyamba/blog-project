@@ -29,6 +29,7 @@ ul {
   grid-template-columns: 1fr 1fr 1fr;
   /* text-align: center; */
   align-items: center;
+
 }
 
 li {
@@ -41,13 +42,27 @@ li {
   user-select: none;
 }
 
-.link:hover {
-  text-decoration: underline;
+.link {
+  position: relative;
   cursor: pointer;
+  line-height: 1;
 }
 
-/* .link:active{
-} */
+.link:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1px; /*задаём ширину линии*/
+  background-color: #ffffff; /*задаём цвет линии*/
+  content: "";
+  transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.link:hover:after,
+.link:focus:after {
+  width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
 
 button {
   margin: 0;
@@ -79,7 +94,7 @@ button {
 .account__div {
   display: flex;
   flex-direction: row;
-  margin: 5px;
+  margin: 5px 0px;
   padding: 1.5em;
   border: 1px solid rgb(199, 199, 199);
   border-radius: 8px;
@@ -111,7 +126,7 @@ button {
 .icon {
   height: 20px;
   width: 20px;
-  padding: 4px;
+  padding: 4px 4px 4px 0px;
 }
 
 .label {
@@ -119,15 +134,15 @@ button {
 }
 
 .workspace {
-  margin: 10px 60px;
+  margin: 20px 6em;
   display: flex;
   flex-direction: row;
   /* grid-template-rows: none  ; */
 }
 
 .notes__div {
-  margin: 5px;
-  flex: 2;
+  margin: 5px 0px 5px 10px;
+  flex: 4;
 }
 
 .input-block__div {
@@ -137,10 +152,9 @@ button {
   box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.1);
   flex: 2;
   background: #f4e6fb;
-  
 }
 
-.input-block-bts__div{
+.input-block-bts__div {
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -169,10 +183,31 @@ textarea {
   box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.1);
 }
 
-.secondary:hover{
-  background:#d689fc;
+.secondary:hover {
+  background: #d689fc;
 }
 
-.secondary:active{
+.secondary:active {
   background: #d697f5;
+}
+
+.post {
+
+}
+
+.post-block-user-info__div{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  /* background: #f4e6fb; */
+}
+
+.post__div{
+  margin: 4px 6em;
+  border-radius: 8px;
+  background: #f9f9f9;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 8px;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
 }
