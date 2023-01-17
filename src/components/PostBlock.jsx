@@ -1,19 +1,19 @@
+import React from "react";
 import { Text } from "./Text";
 import { UserPhoto } from "./UserPhoto";
-const textMessage =
-  "Hello! I'm Alina and I'm a beginner developer. I study at BSUIR and learn English. I like to spend my free time with my cat ^_^";
+import moment from "moment";
 
-export const PostBlock = () => {
+export const PostBlock = ({ text, author, datetime }) => {
   return (
     <div className="post__div">
       <div className="post-block-user-info__div">
         <UserPhoto size="small" />
         <div className="user-info__div">
-          <Text type="label" text="Logunova Alina" />
-          <Text type="paragraph" text="16.01.2023, 13:50" />
+          <Text type="label" text={author} />
+          <Text type="paragraph" text={moment(datetime).format("LLL")} />
         </div>
       </div>
-      <Text type="post" text={textMessage} />
+      <Text type="post" text={text} />
     </div>
   );
 };

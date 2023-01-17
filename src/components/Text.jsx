@@ -1,3 +1,5 @@
+import React from "react"
+
 export const Text = ({text, onClick, type, size, additionalClasses = ''}) => {
   if (onClick) {
     return <div onClick={onClick}>{text}</div>

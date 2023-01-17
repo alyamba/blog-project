@@ -1,3 +1,11 @@
-export const Input = () => {
-  return <textarea placeholder="New post"></textarea>;
+import React from "react";
+
+export const Input = ({ value, setValue = () => {}, placeholder }) => {
+  return (
+    <textarea
+      placeholder={placeholder}
+      onChange={setValue}
+      value={value}
+    ></textarea>
+  );
 };

@@ -1,3 +1,4 @@
+import React from "react";
 import gitURL from "../icons/github.svg";
 import linkedinURL from "../icons/linkedin.svg";
 import { Text } from "./Text";

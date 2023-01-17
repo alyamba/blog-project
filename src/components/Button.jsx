@@ -1,3 +1,5 @@
+import React from "react";
+
 export const Button = ({ label, onPress = () => {}, type = "primary", size = "large" }) => {
   return (
     <button onClick={onPress} className={`${type}`}>

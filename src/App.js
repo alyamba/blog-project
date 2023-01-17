@@ -1,27 +1,66 @@
 import "./App.css";
-import { Button, InputBlock, PostBlock, UserPhoto, NavBar, UserBlock, Footer } from "./components";
+import React, { useState } from "react";
+import {
+  Button,
+  InputBlock,
+  PostBlock,
+  UserPhoto,
+  NavBar,
+  UserBlock,
+  Footer,
+} from "./components";
 import moment from "moment";
 
-const data = [{
-  text: "Hello! I'm Alina and I'm a beginner developer. I study at BSUIR and learn English. I like to spend my free time with my cat ^_^",
-  author: "Logunova Alina",
-  datetime: 1673896847965,
-}]
+
 
 const App = () => {
   // console.log(moment(data[0].datetime).format('LLL'))
+
+  const [postList, setPostList] = useState([]);
+
+  const [postText, setPostText] = useState("");
+
+  const onSaveHandler = () => {
+    if (postText) {
+      const post = {
+        text: postText,
+        author: "Logunova Alina",
+        datetime: Date.now(),
+      };
+      setPostList((old) => [post, ...old]);
+      setPostText("");
+    }
+  };
+
+  const onCancelHandler = () => {
+    if (window.confirm("Are you sure?")) {
+      setPostText("");
+    }
+  };
+
   return (
     <div>
       <NavBar />
+      {console.log(postList)}
       <div className="workspace">
         <UserBlock />
         <div className="notes__div">
-          <InputBlock />
+          <InputBlock
+            placeholder="New post"
+            message={postText}
+            setMessage={(e) => setPostText(e.target.value)}
+            onSave={onSaveHandler}
+            onCancel={onCancelHandler}
+          />
         </div>
       </div>
-      <PostBlock />
-      <PostBlock />
-      <Footer/>
+      {postList.map((el) => {
+        return (
+          <PostBlock text={el.text} author={el.author} datetime={el.datetime} />
+        );
+      })}
+
+      <Footer />
     </div>
   );
 };
