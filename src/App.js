@@ -1,22 +1,16 @@
 import "./App.css";
 import React, { useState } from "react";
-import {
-  Button,
-  InputBlock,
-  PostBlock,
-  UserPhoto,
-  NavBar,
-  UserBlock,
-  Footer,
-} from "./components";
-import moment from "moment";
-
-
+import { InputBlock, PostBlock, NavBar, UserBlock, Footer } from "./components";
+import { useDispatch, useSelector } from "react-redux";
+import { addPost } from "./store/postReducer";
 
 const App = () => {
   // console.log(moment(data[0].datetime).format('LLL'))
 
-  const [postList, setPostList] = useState([]);
+  const dispatch = useDispatch();
+  const postList = useSelector((state) => state.posts.postList);
+
+  console.log(postList);
 
   const [postText, setPostText] = useState("");
 
@@ -27,7 +21,7 @@ const App = () => {
         author: "Logunova Alina",
         datetime: Date.now(),
       };
-      setPostList((old) => [post, ...old]);
+      dispatch(addPost(post));
       setPostText("");
     }
   };
@@ -56,7 +50,12 @@ const App = () => {
       </div>
       {postList.map((el) => {
         return (
-          <PostBlock text={el.text} author={el.author} datetime={el.datetime} />
+          <PostBlock
+            text={el.text}
+            author={el.author}
+            datetime={el.datetime}
+            key={el.datetime}
+          />
         );
       })}
 
