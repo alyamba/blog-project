@@ -58,7 +58,6 @@ const App = () => {
           />
         );
       })}
-
       <Footer />
     </div>
   );

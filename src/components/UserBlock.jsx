@@ -1,8 +1,8 @@
 import React from "react";
 import { UserPhoto } from "./UserPhoto";
 import { Text } from "./Text";
-import userLocation from "../icons/location.png";
-import userBirthday from "../icons/birthday.png";
+import userLocation from "../icons/location1.png";
+import userBirthday from "../icons/birthday-cake.png";
 
 export const UserBlock = () => {
   return (
