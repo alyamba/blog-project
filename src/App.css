@@ -205,12 +205,13 @@ textarea {
 
 .footer__div {
   background-color: #956df3;
-  padding: 12px 6em;
+  padding: 12px 10em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.social-networks__div {
-  text-align: end;
-}
 
 .small {
   color: #fff;
