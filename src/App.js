@@ -36,28 +36,30 @@ const App = () => {
     <div>
       <NavBar />
       {console.log(postList)}
-      <div className="workspace">
-        <UserBlock />
-        <div className="notes__div">
-          <InputBlock
-            placeholder="New post"
-            message={postText}
-            setMessage={(e) => setPostText(e.target.value)}
-            onSave={onSaveHandler}
-            onCancel={onCancelHandler}
-          />
+      <div className="main-container">
+        <div className="workspace">
+          <UserBlock />
+          <div className="notes__div">
+            <InputBlock
+              placeholder="New post"
+              message={postText}
+              setMessage={(e) => setPostText(e.target.value)}
+              onSave={onSaveHandler}
+              onCancel={onCancelHandler}
+            />
+          </div>
         </div>
+        {postList.map((el) => {
+          return (
+            <PostBlock
+              text={el.text}
+              author={el.author}
+              datetime={el.datetime}
+              key={el.datetime}
+            />
+          );
+        })}
       </div>
-      {postList.map((el) => {
-        return (
-          <PostBlock
-            text={el.text}
-            author={el.author}
-            datetime={el.datetime}
-            key={el.datetime}
-          />
-        );
-      })}
       <Footer />
     </div>
   );

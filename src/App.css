@@ -91,6 +91,12 @@ button {
   background: #c76df3;
 }
 
+.main-container {
+  background: #f7f6f6;
+  padding: 20px 10em;
+  margin: 0;
+}
+
 .account__div {
   display: flex;
   flex-direction: row;
@@ -101,6 +107,7 @@ button {
   box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.1);
   align-self: flex-start;
   flex: 1;
+  background: #ffffff;
 }
 
 .user-photo__img {
@@ -132,7 +139,6 @@ button {
 }
 
 .workspace {
-  margin: 20px 10em;
   display: flex;
   flex-direction: row;
 }
@@ -194,13 +200,14 @@ textarea {
 }
 
 .post__div {
-  margin: 20px 10em;
+  margin-top: 20px;
   border-radius: 8px;
-  background: #f2f2f2;
+  /* background: linear-gradient(70deg, #f7e7ff, #c1aaf6); */
   border: 1px solid rgb(199, 199, 199);
   border-radius: 8px;
   box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.1);
   padding: 1.5em;
+  background: #ffffff;
 }
 
 .footer__div {
@@ -211,7 +218,6 @@ textarea {
   justify-content: space-between;
   align-items: center;
 }
-
 
 .small {
   color: #fff;
