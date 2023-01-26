@@ -35,7 +35,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="body__container">
       <NavBar />
       {console.log(postList)}
       <div className="main-container">
