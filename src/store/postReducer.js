@@ -10,7 +10,7 @@ export const postReducer = (state = defaultState, action) => {
     case ADD_POST:
       return { ...state, postList: [action.payload, ...state.postList] };
     case REMOVE_POST:
-      return { ...state };
+      return { ...state, postList: action.payload };
     default:
       return state;
   }
@@ -18,5 +18,10 @@ export const postReducer = (state = defaultState, action) => {
 
 export const addPost = (payload) => ({
   type: ADD_POST,
+  payload,
+});
+
+export const removePost = (payload) => ({
+  type: REMOVE_POST,
   payload,
 });
