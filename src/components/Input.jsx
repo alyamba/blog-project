@@ -1,11 +1,12 @@
 import React from "react";
 
-export const Input = ({ value, setValue = () => {}, placeholder }) => {
+export const Input = ({ value, setValue = () => {}, placeholder, type }) => {
   return (
-    <textarea
+    <input
       placeholder={placeholder}
       onChange={setValue}
       value={value}
-    ></textarea>
+      type={type}
+    />
   );
 };

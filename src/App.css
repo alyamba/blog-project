@@ -258,3 +258,13 @@ textarea {
   display: flex;
   justify-content: center;
 }
+
+input{
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+  min-width: 300px;
+  max-width: 400px;
+  border: 2px solid #956df3;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.1);
+}

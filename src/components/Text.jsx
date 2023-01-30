@@ -1,14 +1,13 @@
-import React from "react"
+import React from "react";
 
-export const Text = ({text, onClick, type, size, additionalClasses = ''}) => {
+export const Text = ({ text, onClick, type, size, additionalClasses = "" }) => {
   if (onClick) {
-    return <div onClick={onClick}>{text}</div>
+    return <div onClick={onClick}>{text}</div>;
   } else {
-    return <div className={`${type} ${additionalClasses}`}>{text}</div>
+    return <div className={`${type} ${additionalClasses}`}>{text}</div>;
   }
-}
-
+};
 
 // type: paragraph | label | link | logo | title | post | small
-// size: 18px | 12px 
+// size: 18px | 12px
 // activity: active | hover | click | default
