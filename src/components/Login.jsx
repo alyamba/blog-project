@@ -7,21 +7,21 @@ import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const dispatch = useDispatch();
-  const { push } = useNavigate();
+  const navigate = useNavigate();
 
   const handleLogin = async (email, password) => {
     const auth = getAuth();
     console.log(auth);
     try {
-      const user = await signInWithEmailAndPassword(auth, email, password);
-      console.log(user);
+      const userData = await signInWithEmailAndPassword(auth, email, password);
+      console.log('user: ', userData);
       dispatch(
         setUser({
-          email: user.email,
-          id: user.uid,
+          email: userData.user.email,
+          id: userData.user.uid,
         })
       );
-      push("/");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }

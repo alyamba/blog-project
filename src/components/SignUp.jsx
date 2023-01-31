@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export const SignUp = () => {
   const dispatch = useDispatch();
-  const { push } = useNavigate();
+  const navigate = useNavigate();
 
   const handleRegister = async (email, password) => {
     const auth = getAuth();
@@ -21,7 +21,7 @@ export const SignUp = () => {
           id: user.uid,
         })
       );
-      push("/");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }

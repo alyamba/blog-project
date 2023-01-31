@@ -9,7 +9,7 @@ const REMOVE_USER = "REMOVE_USER";
 export const userReducer = (state = defaultState, action) => {
   switch (action.type) {
     case SET_USER:
-      console.log(state);
+      console.log('state: ', action);
       return { ...state, ...action.payload };
     case REMOVE_USER:
       console.log(state);

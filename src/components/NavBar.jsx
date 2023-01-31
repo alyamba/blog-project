@@ -9,6 +9,7 @@ export const NavBar = (btnLabel) => {
   const dispatch = useDispatch();
   const onLogIn = () => {};
   const onLogOut = () => {
+    window.confirm("Are you sure?")
     dispatch(removeUser());
   };
 
@@ -33,13 +34,13 @@ export const NavBar = (btnLabel) => {
       {!!userData.id ? (
         <div>
           <Link to="/">
-            <Button label="Sign in" type="primary" onPress={onLogIn}></Button>
+            <Button label="Log out" type="primary" onPress={onLogOut}></Button>
           </Link>
         </div>
       ) : (
         <div>
           <Link to="/login">
-            <Button label="Log in" type="primary" onPress={onLogOut}></Button>
+            <Button label="Log in" type="primary" onPress={onLogIn}></Button>
           </Link>
         </div>
       )}
