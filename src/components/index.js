@@ -7,7 +7,6 @@ import { UserBlock } from "./UserBlock";
 import { InputBlock } from "./InputBlock";
 import { PostBlock } from "./PostBlock";
 import { Footer } from "./Footer";
-import { Form } from "./Form";
 import { Login } from "./Login";
 import { SignUp } from "./SignUp";
 import { Input } from "./Input";
@@ -22,7 +21,6 @@ export {
   InputBlock,
   PostBlock,
   Footer,
-  Form,
   Login,
   SignUp,
   Input,

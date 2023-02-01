@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Footer, NavBar, SignUp } from "../components";
 
 const RegisterPage = () => {
@@ -8,7 +7,6 @@ const RegisterPage = () => {
       <NavBar />
       <div className="main-container">
         <SignUp />
-        <Link to="/login">Go to login</Link>
       </div>
       <Footer />
     </div>

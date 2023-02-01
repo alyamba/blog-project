@@ -9,7 +9,7 @@ export const NavBar = (btnLabel) => {
   const dispatch = useDispatch();
   const onLogIn = () => {};
   const onLogOut = () => {
-    window.confirm("Are you sure?")
+    window.confirm("Are you sure?");
     dispatch(removeUser());
   };
 
@@ -24,12 +24,19 @@ export const NavBar = (btnLabel) => {
             <Text text="Home" type="link" />
           </Link>
         </li>
-        <li>
-          <Text text="Your account" type="link"></Text>
-        </li>
-        <li>
-          <Text text="Settings" type="link"></Text>
-        </li>
+        {!!userData.id ? (
+          <li>
+            <Link to="/account" style={{ textDecoration: "none", color: "white" }}>
+              <Text text="Your account" type="link" />
+            </Link>
+          </li>
+        ) : (
+          <li>
+            <Link to="/login" style={{ textDecoration: "none", color: "white" }}>
+              <Text text="Your account" type="link" />
+            </Link>
+          </li>
+        )}
       </ul>
       {!!userData.id ? (
         <div>

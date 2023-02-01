@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.body__container{
+.body__container {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -14,7 +14,7 @@
 .nav-bar {
   max-width: 100vw;
   min-width: auto;
-  padding: 20px 10em;
+  padding: 20px 8em;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   font-size: 20px;
@@ -32,7 +32,7 @@ ul {
 .ul_nav-bar {
   font-weight: 400;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
@@ -184,7 +184,7 @@ textarea {
 }
 
 .secondary {
-  width: 4em;
+  min-width: 4em;
   margin: 8px 0px 0px 8px;
   padding: 4px;
   color: white;
@@ -259,12 +259,39 @@ textarea {
   justify-content: center;
 }
 
-input{
+input {
   border-radius: 8px;
-  padding: 8px;
-  font-size: 16px;
+  padding: 12px;
+  margin: 10px 0px 5px 0px;
+  font-size: 14px;
   min-width: 300px;
   max-width: 400px;
-  border: 2px solid #956df3;
+  border: 1px solid rgb(187, 187, 187);
+  outline-color: #c76df3;
   box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.1);
+}
+
+.form__container {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(199, 199, 199);
+}
+
+.title {
+  font-size: 36px;
+  margin: 10px;
+  font-weight: 800;
+  color: #bb4ef2;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
 }

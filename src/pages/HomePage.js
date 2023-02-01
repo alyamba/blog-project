@@ -8,6 +8,8 @@ import {
 } from "../components";
 import { useDispatch, useSelector } from "react-redux";
 import { addPost, removePost } from "../store/postReducer";
+import { addDoc, collection } from "firebase/firestore";
+import { db, auth } from "../firebase";
 
 const HomePage = () => {
   const userData = useSelector((state) => state.user);
@@ -16,11 +18,21 @@ const HomePage = () => {
 
   const [postText, setPostText] = useState("");
 
-  const onSaveHandler = () => {
+  const postCollectionRef = collection(db, "posts");
+
+  const onSaveHandler = async () => {
     if (postText) {
+      await addDoc(postCollectionRef, {
+        text: postText,
+        author: {
+          name: auth.currentUser.email,
+          id: auth.currentUser.uid,
+        },
+        datetime: Date.now(),
+      });
       const post = {
         text: postText,
-        author: "Logunova Alina",
+        author: auth.currentUser.email,
         datetime: Date.now(),
       };
       dispatch(addPost(post));
